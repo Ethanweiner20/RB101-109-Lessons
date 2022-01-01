@@ -54,11 +54,11 @@ Idea:
 =end
 
 order_data = [
-  {customer_id: 12, customer_name: 'Emma Lopez', order_id: 351, order_date: '12/04/16', order_fulfilled: true, order_value: 135.99},
-  {customer_id: 12, customer_name: 'Emma Lopez', order_id: 383, order_date: '12/04/16', order_fulfilled: true, order_value: 289.49},
-  {customer_id: 12, customer_name: 'Emma Lopez', order_id: 392, order_date: '01/10/17', order_fulfilled: false, order_value: 58.00},
-  {customer_id: 32, customer_name: 'Michael Richards', order_id: 241, order_date: '11/10/16', order_fulfilled: true, order_value: 120.00},
-  {customer_id: 32, customer_name: 'Michael Richards', order_id: 395, order_date: '01/10/17', order_fulfilled: false, order_value: 85.65},
+  { customer_id: 12, customer_name: 'Emma Lopez', order_id: 351, order_date: '12/04/16', order_fulfilled: true, order_value: 135.99 },
+  { customer_id: 12, customer_name: 'Emma Lopez', order_id: 383, order_date: '12/04/16', order_fulfilled: true, order_value: 289.49 },
+  { customer_id: 12, customer_name: 'Emma Lopez', order_id: 392, order_date: '01/10/17', order_fulfilled: false, order_value: 58.00 },
+  { customer_id: 32, customer_name: 'Michael Richards', order_id: 241, order_date: '11/10/16', order_fulfilled: true, order_value: 120.00 },
+  { customer_id: 32, customer_name: 'Michael Richards', order_id: 395, order_date: '01/10/17', order_fulfilled: false, order_value: 85.65 }
   # rest of data...
 ]
 
@@ -79,7 +79,7 @@ customer_orders = [
       { order_fulfilled: true, order_value: 120.00 },
       { order_fulfilled: false, order_value: 85.65 }
     ]
-  },
+  }
   # rest of data...
 ]
 
@@ -95,13 +95,13 @@ a.
 orders
 
 This won't work properly, because the orders are being bult as arrays, not
-as hashes as key-value pairs. 
+as hashes as key-value pairs.
 
 b. This won't work because the orders for a given customer do not accumulate;
 they are simply replaced by a single-element array with the order of the current
 iteration.
 
-c. 
+c.
 If customer orders already contains the customer, append a new order
 directly to that customer's orders.
 - The order is in the form of a hash
@@ -133,21 +133,21 @@ customer_orders = [
       { order_fulfilled: true, order_value: 120.00 },
       { order_fulfilled: false, order_value: 85.65 }
     ]
-  },
+  }
   # rest of data...
 ]
 
 # Expected results:
 
-all_orders =[
-  {customer_id: 12, customer_name: 'Emma Lopez', total_order_value: 483.48},
-  {customer_id: 32, customer_name: 'Michael Richards', total_order_value: 205.65},
+all_orders = [
+  { customer_id: 12, customer_name: 'Emma Lopez', total_order_value: 483.48 },
+  { customer_id: 32, customer_name: 'Michael Richards', total_order_value: 205.65 }
   # rest of data
 ]
 
-fulfilled_orders =[
-  {customer_id: 12, customer_name: 'Emma Lopez', order_value: 425.48},
-  {customer_id: 32, customer_name: 'Michael Richards', order_value: 120.00},
+fulfilled_orders = [
+  { customer_id: 12, customer_name: 'Emma Lopez', order_value: 425.48 },
+  { customer_id: 32, customer_name: 'Michael Richards', order_value: 120.00 }
   # rest of data
 ]
 
